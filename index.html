@@ -10,9 +10,11 @@
 
 <body>
   <header class="site-header">
-    <a class="logo" href="/">TEKCO Labs</a>
-    <nav>
+    <a class="logo" href="/" aria-label="TEKCO Labs home">TEKCO Labs</a>
+
+    <nav aria-label="Primary navigation">
       <a href="#dropspot">DropSpot</a>
+      <a href="#features">Features</a>
       <a href="#about">About</a>
       <a href="mailto:tekcosales@gmail.com">Contact</a>
     </nav>
@@ -22,31 +24,37 @@
     <section class="hero" id="dropspot">
       <div class="hero-copy">
         <p class="eyebrow">DropSpot</p>
+
         <h1>Never lose important things again.</h1>
+
         <p class="hero-subtitle">
           Save a photo, place, and time in seconds. DropSpot helps you remember
           where you left your keys, wallet, bag, tools, and everyday essentials.
         </p>
 
-        <div class="store-buttons">
+        <div class="store-buttons" aria-label="App store availability">
           <a class="store-button disabled" href="#" aria-label="Download on the App Store">
-            Download on the<br><strong>App Store</strong>
+            <span>Download on the</span>
+            <strong>App Store</strong>
           </a>
+
           <a class="store-button disabled" href="#" aria-label="Get it on Google Play">
-            Get it on<br><strong>Google Play</strong>
+            <span>Get it on</span>
+            <strong>Google Play</strong>
           </a>
         </div>
 
         <p class="availability">Coming soon for iOS and Android.</p>
       </div>
 
-      <div class="phone-wrap">
+      <div class="phone-wrap" aria-label="DropSpot app preview">
         <div class="phone">
           <div class="phone-status"></div>
+
           <div class="app-screen">
             <div class="app-title-row">
               <strong>DropSpot</strong>
-              <span>⋮</span>
+              <span aria-hidden="true">⋮</span>
             </div>
 
             <div class="hero-card">
@@ -67,7 +75,7 @@
             <h3>Recent Drops</h3>
 
             <div class="drop-card">
-              <div class="thumb"></div>
+              <div class="thumb light"></div>
               <div>
                 <strong>keys</strong>
                 <span>Home · High Line Place</span>
@@ -82,30 +90,31 @@
               </div>
             </div>
 
-            <button class="drop-button">DROP</button>
+            <button class="drop-button" type="button">DROP</button>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="features">
-      <div class="feature-card">
+    <section class="features" id="features">
+      <article class="feature-card">
         <h2>Snap and save.</h2>
         <p>Capture a photo and location before you forget where something was left.</p>
-      </div>
+      </article>
 
-      <div class="feature-card">
+      <article class="feature-card">
         <h2>Search instantly.</h2>
         <p>Find saved drops by name, category, location, or memory trail.</p>
-      </div>
+      </article>
 
-      <div class="feature-card">
+      <article class="feature-card">
         <h2>Built for calm.</h2>
         <p>A clean, focused interface designed to help you remember without clutter.</p>
-      </div>
+      </article>
     </section>
 
     <section class="statement">
+      <p class="section-kicker">Everyday memory backup</p>
       <h2>Your everyday memory assistant.</h2>
       <p>
         DropSpot is designed for the small but frustrating moments — misplaced keys,
@@ -114,17 +123,27 @@
     </section>
 
     <section class="about" id="about">
-      <h2>About TEKCO Labs</h2>
+      <p class="section-kicker">TEKCO Labs</p>
+      <h2>Simple software for real life.</h2>
       <p>
-        TEKCO Labs builds simple, focused consumer software and mobile applications
-        for productivity, organization, and everyday utility.
+        TEKCO Labs builds focused consumer software and mobile applications for
+        productivity, organization, and everyday utility.
       </p>
     </section>
   </main>
 
-  <footer>
-    <p>© 2026 TEKCO Labs. All rights reserved.</p>
-    <p><a href="mailto:tekcosales@gmail.com">tekcosales@gmail.com</a></p>
+  <footer class="site-footer">
+    <div>
+      <a class="footer-logo" href="/">TEKCO Labs</a>
+      <p>© 2026 TEKCO Labs. All rights reserved.</p>
+    </div>
+
+    <div class="footer-links">
+      <a href="mailto:tekcosales@gmail.com">Support</a>
+      <a href="mailto:tekcosales@gmail.com">Contact</a>
+      <a href="#">Privacy</a>
+      <a href="#">Terms</a>
+    </div>
   </footer>
 </body>
 </html>
