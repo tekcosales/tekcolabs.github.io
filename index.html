@@ -1,102 +1,130 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>TEKCO Labs</title>
-
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      max-width: 900px;
-      margin: 60px auto;
-      padding: 20px;
-      line-height: 1.7;
-      color: #222;
-    }
-
-    h1 {
-      font-size: 52px;
-      margin-bottom: 10px;
-    }
-
-    h2 {
-      margin-top: 50px;
-    }
-
-    .subtitle {
-      font-size: 22px;
-      color: #555;
-    }
-
-    footer {
-      margin-top: 80px;
-      padding-top: 20px;
-      border-top: 1px solid #ddd;
-      color: #777;
-      font-size: 14px;
-    }
-
-    a {
-      color: #0a66c2;
-      text-decoration: none;
-    }
-  </style>
+  <meta name="description" content="TEKCO Labs builds simple, focused mobile applications for everyday life." />
+  <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
+  <header class="site-header">
+    <a class="logo" href="/">TEKCO Labs</a>
+    <nav>
+      <a href="#dropspot">DropSpot</a>
+      <a href="#about">About</a>
+      <a href="mailto:tekcosales@gmail.com">Contact</a>
+    </nav>
+  </header>
 
-  <h1>TEKCO Labs</h1>
+  <main>
+    <section class="hero" id="dropspot">
+      <div class="hero-copy">
+        <p class="eyebrow">DropSpot</p>
+        <h1>Never lose important things again.</h1>
+        <p class="hero-subtitle">
+          Save a photo, place, and time in seconds. DropSpot helps you remember
+          where you left your keys, wallet, bag, tools, and everyday essentials.
+        </p>
 
-  <p class="subtitle">
-    Consumer software and mobile application development.
-  </p>
+        <div class="store-buttons">
+          <a class="store-button disabled" href="#" aria-label="Download on the App Store">
+            Download on the<br><strong>App Store</strong>
+          </a>
+          <a class="store-button disabled" href="#" aria-label="Get it on Google Play">
+            Get it on<br><strong>Google Play</strong>
+          </a>
+        </div>
 
-  <section>
-    <h2>About</h2>
+        <p class="availability">Coming soon for iOS and Android.</p>
+      </div>
 
-    <p>
-      TEKCO Labs develops mobile applications and digital tools focused on productivity,
-      organization, and consumer utility experiences.
-    </p>
+      <div class="phone-wrap">
+        <div class="phone">
+          <div class="phone-status"></div>
+          <div class="app-screen">
+            <div class="app-title-row">
+              <strong>DropSpot</strong>
+              <span>⋮</span>
+            </div>
 
-    <p>
-      Our current projects include DropSpot and additional productivity-focused software platforms.
-    </p>
-  </section>
+            <div class="hero-card">
+              <strong>Your memory, backed up.</strong>
+              <span>Save a photo, place, and time in seconds.</span>
+              <small>7 of 7 free drops used.</small>
+            </div>
 
-  <section>
-    <h2>Projects</h2>
+            <div class="search-bar">Search keys, wallet, charger...</div>
 
-    <ul>
-      <li>DropSpot</li>
-      <li>Focus and productivity tools</li>
-    </ul>
-  </section>
+            <div class="chips">
+              <span class="active">All</span>
+              <span>Home</span>
+              <span>Work</span>
+              <span>Car</span>
+            </div>
 
-  <section>
-    <h2>Contact</h2>
+            <h3>Recent Drops</h3>
 
-    <p>
-      Email:
-      <a href="mailto:tekcosales@gmail.com">
-        tekcosales@gmail.com
-      </a>
-    </p>
-  </section>
+            <div class="drop-card">
+              <div class="thumb"></div>
+              <div>
+                <strong>keys</strong>
+                <span>Home · High Line Place</span>
+              </div>
+            </div>
 
-  <section>
-    <h2>Privacy Policy</h2>
+            <div class="drop-card">
+              <div class="thumb dark"></div>
+              <div>
+                <strong>wallet</strong>
+                <span>Car · Muhlhauser Road</span>
+              </div>
+            </div>
 
-    <p>
-      TEKCO Labs is committed to protecting user privacy and handling user data responsibly.
-      Additional application-specific privacy policies will be provided alongside published applications.
-    </p>
-  </section>
+            <button class="drop-button">DROP</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="features">
+      <div class="feature-card">
+        <h2>Snap and save.</h2>
+        <p>Capture a photo and location before you forget where something was left.</p>
+      </div>
+
+      <div class="feature-card">
+        <h2>Search instantly.</h2>
+        <p>Find saved drops by name, category, location, or memory trail.</p>
+      </div>
+
+      <div class="feature-card">
+        <h2>Built for calm.</h2>
+        <p>A clean, focused interface designed to help you remember without clutter.</p>
+      </div>
+    </section>
+
+    <section class="statement">
+      <h2>Your everyday memory assistant.</h2>
+      <p>
+        DropSpot is designed for the small but frustrating moments — misplaced keys,
+        forgotten bags, hidden wallets, and the things you meant to remember later.
+      </p>
+    </section>
+
+    <section class="about" id="about">
+      <h2>About TEKCO Labs</h2>
+      <p>
+        TEKCO Labs builds simple, focused consumer software and mobile applications
+        for productivity, organization, and everyday utility.
+      </p>
+    </section>
+  </main>
 
   <footer>
-    © 2026 TEKCO Labs. All rights reserved.
+    <p>© 2026 TEKCO Labs. All rights reserved.</p>
+    <p><a href="mailto:tekcosales@gmail.com">tekcosales@gmail.com</a></p>
   </footer>
-
 </body>
 </html>
