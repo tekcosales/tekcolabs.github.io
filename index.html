@@ -3,8 +3,22 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>TEKCO Labs</title>
-  <meta name="description" content="TEKCO Labs builds simple, focused mobile applications for everyday life." />
+
+  <title>DropSpot by TEKCO Labs</title>
+  <meta
+    name="description"
+    content="DropSpot remembers where you left your everyday essentials with a photo, location, timestamp, and label."
+  />
+
+  <meta property="og:title" content="DropSpot — Never lose the little things again." />
+  <meta
+    property="og:description"
+    content="Save photos, locations, and timestamps in seconds so you can find keys, wallets, bags, chargers, and more."
+  />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://tekcolabs.com/" />
+  <meta property="og:image" content="https://tekcolabs.com/images/dropspot-home-dark.png" />
+
   <link rel="stylesheet" href="style.css" />
 </head>
 
@@ -15,6 +29,7 @@
     <nav aria-label="Primary navigation">
       <a href="#dropspot">DropSpot</a>
       <a href="#features">Features</a>
+      <a href="#screenshots">Screenshots</a>
       <a href="#about">About</a>
       <a href="mailto:tekcosales@gmail.com">Contact</a>
     </nav>
@@ -22,113 +37,163 @@
 
   <main>
     <section class="hero" id="dropspot">
-      <div class="hero-copy">
+      <div class="hero-copy reveal">
         <p class="eyebrow">DropSpot</p>
 
-        <h1>Never lose important things again.</h1>
+        <h1>Never lose the little things again.</h1>
 
         <p class="hero-subtitle">
-          Save a photo, place, and time in seconds. DropSpot helps you remember
-          where you left your keys, wallet, bag, tools, and everyday essentials.
+          DropSpot gives your memory a backup. Save a photo, location,
+          timestamp, and label in seconds so you can find keys, wallets,
+          bags, chargers, tools, and more.
         </p>
 
         <div class="store-buttons" aria-label="App store availability">
-          <a class="store-button disabled" href="#" aria-label="Download on the App Store">
-            <span>Download on the</span>
-            <strong>App Store</strong>
+          <a class="badge-link disabled" href="#" aria-label="Download on the App Store">
+            <img src="images/app-store-badge.svg" alt="Download on the App Store" />
           </a>
 
-          <a class="store-button disabled" href="#" aria-label="Get it on Google Play">
-            <span>Get it on</span>
-            <strong>Google Play</strong>
+          <a class="badge-link disabled" href="#" aria-label="Get it on Google Play">
+            <img src="images/google-play-badge.svg" alt="Get it on Google Play" />
           </a>
         </div>
 
         <p class="availability">Coming soon for iOS and Android.</p>
       </div>
 
-      <div class="phone-wrap" aria-label="DropSpot app preview">
-        <div class="phone">
-          <div class="phone-status"></div>
-
-          <div class="app-screen">
-            <div class="app-title-row">
-              <strong>DropSpot</strong>
-              <span aria-hidden="true">⋮</span>
-            </div>
-
-            <div class="hero-card">
-              <strong>Your memory, backed up.</strong>
-              <span>Save a photo, place, and time in seconds.</span>
-              <small>7 of 7 free drops used.</small>
-            </div>
-
-            <div class="search-bar">Search keys, wallet, charger...</div>
-
-            <div class="chips">
-              <span class="active">All</span>
-              <span>Home</span>
-              <span>Work</span>
-              <span>Car</span>
-            </div>
-
-            <h3>Recent Drops</h3>
-
-            <div class="drop-card">
-              <div class="thumb light"></div>
-              <div>
-                <strong>keys</strong>
-                <span>Home · High Line Place</span>
-              </div>
-            </div>
-
-            <div class="drop-card">
-              <div class="thumb dark"></div>
-              <div>
-                <strong>wallet</strong>
-                <span>Car · Muhlhauser Road</span>
-              </div>
-            </div>
-
-            <button class="drop-button" type="button">DROP</button>
-          </div>
+      <div class="hero-visual reveal" aria-label="DropSpot app preview">
+        <div class="phone-frame hero-phone">
+          <img src="images/dropspot-home-dark.png" alt="DropSpot home screen showing saved drops" />
         </div>
       </div>
     </section>
 
-    <section class="features" id="features">
-      <article class="feature-card">
-        <h2>Snap and save.</h2>
-        <p>Capture a photo and location before you forget where something was left.</p>
-      </article>
+    <section class="how-it-works" id="features">
+      <div class="section-heading reveal">
+        <p class="section-kicker">How it works</p>
+        <h2>Save the moment. Find it later.</h2>
+        <p>
+          DropSpot is built for the small moments you meant to remember before life moved on.
+        </p>
+      </div>
 
-      <article class="feature-card">
-        <h2>Search instantly.</h2>
-        <p>Find saved drops by name, category, location, or memory trail.</p>
-      </article>
+      <div class="steps">
+        <article class="step-card reveal">
+          <span>01</span>
+          <h3>Tap DROP.</h3>
+          <p>Quickly label what you are saving and choose where it belongs.</p>
+        </article>
 
-      <article class="feature-card">
-        <h2>Built for calm.</h2>
-        <p>A clean, focused interface designed to help you remember without clutter.</p>
-      </article>
+        <article class="step-card reveal">
+          <span>02</span>
+          <h3>Add a photo.</h3>
+          <p>Capture a visual memory so the exact spot is easier to recognize later.</p>
+        </article>
+
+        <article class="step-card reveal">
+          <span>03</span>
+          <h3>Find it again.</h3>
+          <p>Search your saved drops and open the location when you need to return.</p>
+        </article>
+      </div>
     </section>
 
-    <section class="statement">
-      <p class="section-kicker">Everyday memory backup</p>
-      <h2>Your everyday memory assistant.</h2>
+    <section class="feature-showcase dark-feature">
+      <div class="feature-copy reveal">
+        <p class="section-kicker">Memory backup</p>
+        <h2>Capture what matters in seconds.</h2>
+        <p>
+          Save the exact moment with a photo, collection, timestamp, and location.
+          DropSpot keeps everyday details from disappearing.
+        </p>
+      </div>
+
+      <div class="feature-image-stack reveal">
+        <div class="phone-frame tilted-left">
+          <img src="images/dropspot-onboarding-save.png" alt="DropSpot onboarding screen explaining save the exact moment" />
+        </div>
+        <div class="phone-frame tilted-right floating-phone">
+          <img src="images/dropspot-home-dark.png" alt="DropSpot dark mode home screen" />
+        </div>
+      </div>
+    </section>
+
+    <section class="feature-showcase light-feature">
+      <div class="feature-image-wrap reveal">
+        <div class="phone-frame detail-phone">
+          <img src="images/dropspot-detail-dark.png" alt="DropSpot saved item detail screen with photo and previous drops" />
+        </div>
+      </div>
+
+      <div class="feature-copy reveal">
+        <p class="section-kicker">History</p>
+        <h2>See where something has been before.</h2>
+        <p>
+          Saved drops can build a useful memory trail, helping you recognize repeat patterns
+          and quickly return to previous locations.
+        </p>
+      </div>
+    </section>
+
+    <section class="feature-showcase map-feature">
+      <div class="feature-copy reveal">
+        <p class="section-kicker">Navigation</p>
+        <h2>Guide yourself back.</h2>
+        <p>
+          Open a saved spot in maps when you need to return. Location context turns a vague
+          memory into a specific place.
+        </p>
+      </div>
+
+      <div class="map-preview reveal">
+        <img src="images/dropspot-guide-map.png" alt="Map preview showing a saved DropSpot location" />
+        <div class="privacy-fade"></div>
+      </div>
+    </section>
+
+    <section class="screenshots" id="screenshots">
+      <div class="section-heading reveal">
+        <p class="section-kicker">Screenshots</p>
+        <h2>Designed to feel calm, fast, and familiar.</h2>
+        <p>
+          DropSpot stays simple: save what you dropped, search for it later, and keep moving.
+        </p>
+      </div>
+
+      <div class="screenshot-grid">
+        <div class="phone-frame reveal">
+          <img src="images/dropspot-home-dark.png" alt="DropSpot dark mode home screen" />
+        </div>
+
+        <div class="phone-frame reveal">
+          <img src="images/dropspot-appearance.png" alt="DropSpot appearance settings screen" />
+        </div>
+
+        <div class="phone-frame reveal">
+          <img src="images/dropspot-home-light.png" alt="DropSpot light mode home screen" />
+        </div>
+      </div>
+    </section>
+
+    <section class="statement reveal">
+      <p class="section-kicker">Everyday memory assistant</p>
+      <h2>Your memory, backed up.</h2>
       <p>
-        DropSpot is designed for the small but frustrating moments — misplaced keys,
-        forgotten bags, hidden wallets, and the things you meant to remember later.
+        DropSpot is designed for the everyday friction points: misplaced keys,
+        forgotten bags, hidden wallets, parked cars, chargers, tools, and the things
+        you meant to remember later.
       </p>
     </section>
 
     <section class="about" id="about">
-      <p class="section-kicker">TEKCO Labs</p>
-      <h2>Simple software for real life.</h2>
-      <p>
-        TEKCO Labs builds focused consumer software and mobile applications for
-        productivity, organization, and everyday utility.
-      </p>
+      <div class="about-card reveal">
+        <p class="section-kicker">TEKCO Labs</p>
+        <h2>Simple software for real life.</h2>
+        <p>
+          TEKCO Labs builds focused consumer software and mobile applications for
+          productivity, organization, and everyday utility.
+        </p>
+      </div>
     </section>
   </main>
 
