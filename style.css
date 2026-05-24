@@ -54,9 +54,33 @@ h1 { font-size: clamp(58px, 8vw, 104px); line-height: .95; letter-spacing: -.078
   color: var(--muted);
   font-weight: 700;
 }
-.store-buttons { display: flex; gap: 14px; flex-wrap: wrap; align-items: center; }
-.badge-link { display: inline-flex; height: 58px; transition: transform .22s ease, opacity .22s ease; }
-.badge-link img { height: 58px; width: auto; object-fit: contain; }
+.store-buttons {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.badge-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition:
+    transform .22s ease,
+    opacity .22s ease;
+}
+
+.badge-link img {
+  display: block;
+  width: auto;
+  height: auto;
+  max-height: 58px;
+  object-fit: contain;
+}
+
+.badge-link:hover {
+  transform: translateY(-2px);
+}
 .badge-link:hover { transform: translateY(-2px); }
 .badge-link.disabled { cursor: default; }
 .availability { margin-top: 18px; color: #94a3b8; font-size: 15px; font-weight: 700; }
@@ -177,7 +201,9 @@ h1 { font-size: clamp(58px, 8vw, 104px); line-height: .95; letter-spacing: -.078
 @media (max-width: 560px) {
   h1 { font-size: clamp(46px, 15vw, 68px); }
   .hero-subtitle, .section-heading p, .statement p, .about p, .feature-copy p, .step-card p { font-size: 18px; }
-  .badge-link, .badge-link img { height: 52px; }
+  .badge-link img {
+      max-height: 52px;
+  }
   .store-buttons { gap: 10px; }
   .hero-phone, .detail-phone, .tilted-left, .tilted-right, .screenshot-grid .phone-frame, .onboarding-strip .phone-frame { width: min(310px, 100%); margin-left: auto; margin-right: auto; }
   .section-heading h2, .statement h2, .about h2, .feature-copy h2 { font-size: 42px; }
