@@ -495,3 +495,14 @@ h1 {
   .demo-phone, .tilted-left, .tilted-right, .completion-phone, .delete-phone { width: min(300px, 100%); }
   .success-toast { bottom: 44px; min-width: min(285px, 90%); }
 }
+
+
+:root{--bg:#fbfbfd;--text:#1d1d1f;--muted:#6e6e73;--panel:#ffffff;--line:rgba(0,0,0,.08);--blue:#315cf0;--shadow:rgba(0,0,0,.08)}
+body.apple-light{background:#fbfbfd;color:var(--text)}
+body.apple-light .page-glow{opacity:.18}
+body.apple-light .dark-panel,body.apple-light .demo-flow,.privacy-card,.floating-card{background:#fff;color:#111;border-color:rgba(0,0,0,.06);backdrop-filter:none}
+body.apple-light .hero{min-height:680px}
+body.apple-light .secondary-button{color:#111;background:#fff}
+body.apple-light .trust-row span{color:#555;background:#fff;border-color:#ececec}
+.store-badge{font-weight:900}
+.hero-phone,.demo-phone,.completion-phone,.delete-phone{box-shadow:0 40px 80px rgba(0,0,0,.10)}
