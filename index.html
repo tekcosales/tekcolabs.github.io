@@ -6,7 +6,7 @@
   <title>DropSpot by TEKCO Labs</title>
   <meta name="description" content="DropSpot helps you remember where you left everyday essentials by saving a photo, place, and time in seconds." />
   <meta property="og:title" content="DropSpot — Remember where you left it." />
-  <meta property="og:description" content="Save a photo, place, and time. Find it again instantly." />
+  <meta property="og:description" content="Save a photo, place, and time. Find it again later." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://tekcolabs.com/" />
   <meta property="og:image" content="https://tekcolabs.com/images/drop-home-sample.png" />
@@ -14,18 +14,15 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <div class="page-glow page-glow-one" aria-hidden="true"></div>
-  <div class="page-glow page-glow-two" aria-hidden="true"></div>
-
   <header class="site-header">
-    <a class="logo" href="/" aria-label="TEKCO Labs home">
-      <span class="logo-mark">T</span>
+    <a class="brand" href="/" aria-label="TEKCO Labs home">
+      <span class="brand-mark">T</span>
       <span>TEKCO Labs</span>
     </a>
     <nav aria-label="Primary navigation">
       <a href="#product">Product</a>
-      <a href="#demo">Guided demo</a>
-      <a href="#features">Features</a>
+      <a href="#flow">How it works</a>
+      <a href="#demo">Demo</a>
       <a href="#privacy">Privacy</a>
       <a href="mailto:tekcosales@gmail.com">Contact</a>
     </nav>
@@ -33,137 +30,143 @@
 
   <main>
     <section class="hero" id="product">
-      <div class="hero-copy reveal">
+      <div class="hero-copy">
         <p class="eyebrow">DropSpot for iOS & Android</p>
         <h1>Remember where you left it.</h1>
-        <p class="hero-subtitle">Drop a photo, place, and time the moment you set something down. Find it again when your future self needs it.</p>
-        <div class="hero-actions" aria-label="Primary actions">
-          <a class="primary-button" href="mailto:tekcosales@gmail.com?subject=DropSpot%20beta%20access">Join private beta</a>
-          <a class="secondary-button" href="#demo">See guided flow</a>
+        <p class="hero-subtitle">DropSpot saves a quick photo, place, and time when you set something down—so you can find it again later.</p>
+        <div class="hero-actions">
+          <a class="primary-button" href="mailto:tekcosales@gmail.com?subject=DropSpot%20beta%20access">Request beta access</a>
+          <a class="secondary-button" href="#demo">See guided demo</a>
         </div>
-        <div class="store-badges" aria-label="App store download placeholders">
-          <a class="store-badge" href="mailto:tekcosales@gmail.com?subject=DropSpot%20iOS%20beta" aria-label="Download on iOS coming soon">
-            <span class="store-icon"></span>
-            <span><small>Download on</small><strong>iOS</strong></span>
+        <div class="store-row" aria-label="App store download links">
+          <a href="mailto:tekcosales@gmail.com?subject=DropSpot%20iOS%20beta" aria-label="Download on the App Store">
+            <img src="images/app-store-badge.svg" alt="Download on the App Store" />
           </a>
-          <a class="store-badge disabled" href="mailto:tekcosales@gmail.com?subject=DropSpot%20Android%20beta" aria-label="Google Play coming soon">
-            <span class="store-icon">▶</span>
-            <span><small>Coming soon on</small><strong>Google Play</strong></span>
+          <a href="mailto:tekcosales@gmail.com?subject=DropSpot%20Android%20beta" aria-label="Get it on Google Play">
+            <img src="images/google-play-badge.svg" alt="Get it on Google Play" />
           </a>
-        </div>
-        <div class="trust-row" aria-label="Product highlights">
-          <span>Private sample demo</span>
-          <span>Quick photo capture</span>
-          <span>Guide Me Back</span>
         </div>
       </div>
 
-      <div class="hero-visual reveal" aria-label="DropSpot app preview">
-        <div class="phone-orbit" aria-hidden="true"></div>
-        <figure class="phone-frame hero-phone">
-          <img src="images/drop-home-sample.png" alt="DropSpot home screen with a private sample keys drop" />
-        </figure>
-        <div class="floating-card top-card">
-          <span class="mini-icon">✓</span>
+      <div class="hero-visual" aria-label="DropSpot app preview">
+        <div class="phone-shell hero-phone">
+          <img src="images/drop-home-sample.png" alt="DropSpot home screen showing a sample keys drop" />
+        </div>
+        <div class="glass-note note-top">
+          <span>✓</span>
           <div><strong>First drop saved</strong><small>You’ll be able to find it later.</small></div>
         </div>
-        <div class="floating-card bottom-card">
-          <span class="mini-icon">⌖</span>
-          <div><strong>Save photo • place • time</strong><small>Designed for the moment you set it down.</small></div>
+        <div class="glass-note note-bottom">
+          <span>⌖</span>
+          <div><strong>Photo • place • time</strong><small>Saved the moment you set it down.</small></div>
         </div>
       </div>
     </section>
 
-    <section class="demo-section" id="demo">
-      <div class="section-heading reveal">
-        <p class="section-kicker">Guided demo</p>
-        <h2>New users learn by doing.</h2>
-        <p>The website now reflects the actual product flow: tap the real DROP button, create a private sample, open it, and try Guide Me Back.</p>
+    <section class="section intro-panel" id="flow">
+      <div class="section-heading">
+        <p class="eyebrow">Core loop</p>
+        <h2>One simple habit: drop it before you forget it.</h2>
+        <p>DropSpot is built for the small everyday items that disappear at the worst time: keys, wallets, bags, documents, tools, and more.</p>
       </div>
-
-      <div class="demo-flow">
-        <article class="demo-copy reveal">
-          <span class="step-pill">01</span>
-          <h3>Try guided demo</h3>
-          <p>DropSpot starts with a private sample walkthrough so users understand the core habit before saving their first real drop.</p>
-          <ul>
-            <li>Private sample stays local</li>
-            <li>Never counts toward backup or free limits</li>
-            <li>User stays in control of every tap</li>
-          </ul>
+      <div class="three-cards">
+        <article>
+          <span class="number">01</span>
+          <h3>Drop</h3>
+          <p>Capture a photo and location in seconds.</p>
         </article>
-        <figure class="phone-frame demo-phone reveal"><img src="images/drop-guided-demo.png" alt="DropSpot Try guided demo bottom sheet" /></figure>
-      </div>
-
-      <div class="guided-strip reveal" aria-label="DropSpot guided demo screenshots">
-        <figure><img src="images/drop-step-one.png" alt="Step 1 Tap DROP guided cue" /><figcaption>Tap the real DROP button.</figcaption></figure>
-        <figure><img src="images/drop-take-photo.png" alt="Take a sample photo of your keys" /><figcaption>Add a private sample photo.</figcaption></figure>
-        <figure><img src="images/drop-open-sample.png" alt="Tap your sample below cue" /><figcaption>Open the sample drop.</figcaption></figure>
-        <figure><img src="images/drop-guide-back.png" alt="Guide Me Back call to action" /><figcaption>Try Guide Me Back.</figcaption></figure>
-      </div>
-    </section>
-
-    <section class="feature-showcase dark-panel" id="features">
-      <div class="feature-copy reveal">
-        <p class="section-kicker">Core loop</p>
-        <h2>A memory point for the things you misplace.</h2>
-        <p>Every drop keeps the information people forget first: what it looked like, where it was, and when it was saved.</p>
-        <div class="feature-grid-mini">
-          <div><strong>DROP</strong><span>Capture instantly</span></div>
-          <div><strong>Search</strong><span>Find by name or place</span></div>
-          <div><strong>Guide</strong><span>Return to the last spot</span></div>
-        </div>
-      </div>
-      <div class="stacked-phones reveal">
-        <figure class="phone-frame tilted-left"><img src="images/drop-home-sample.png" alt="DropSpot saved sample card" /></figure>
-        <figure class="phone-frame tilted-right"><img src="images/drop-detail-guide.png" alt="DropSpot detail screen with Guide Me Back button" /></figure>
+        <article>
+          <span class="number">02</span>
+          <h3>Search</h3>
+          <p>Find saved drops by name, place, or collection.</p>
+        </article>
+        <article>
+          <span class="number">03</span>
+          <h3>Guide</h3>
+          <p>Open the last spot when you need to go back.</p>
+        </article>
       </div>
     </section>
 
-    <section class="feature-showcase light-panel">
-      <div class="feature-copy reveal">
-        <p class="section-kicker">After the demo</p>
-        <h2>Move from sample to first real drop.</h2>
-        <p>Once users complete the sample flow, DropSpot invites them to create their first real drop and gives a concise success message after it saves.</p>
+    <section class="section split-section" id="demo">
+      <div class="split-copy">
+        <p class="eyebrow">Guided demo</p>
+        <h2>New users learn by doing.</h2>
+        <p>The first-run demo walks users through the real DropSpot flow: tap DROP, create a private sample, open it, and try Guide Me Back.</p>
+        <ul class="check-list">
+          <li>Sample drops stay local-only</li>
+          <li>Sample data never counts toward limits</li>
+          <li>The user stays in control of every tap</li>
+        </ul>
       </div>
-      <div class="completion-card reveal">
-        <figure class="phone-frame completion-phone"><img src="images/drop-sample-complete.png" alt="Sample complete screen with Create first drop button" /></figure>
-        <div class="success-toast">
+      <div class="image-stage single-phone">
+        <div class="phone-shell"><img src="images/drop-guided-demo.png" alt="DropSpot guided demo intro" /></div>
+      </div>
+    </section>
+
+    <section class="section flow-strip" aria-label="DropSpot guided demo sequence">
+      <figure>
+        <img src="images/drop-step-one.png" alt="Step 1 tap the DROP button" />
+        <figcaption><strong>Tap DROP</strong><span>Users begin with the actual product action.</span></figcaption>
+      </figure>
+      <figure>
+        <img src="images/drop-take-photo.png" alt="Take a sample keys photo" />
+        <figcaption><strong>Add a sample photo</strong><span>Sample data stays local and does not count toward limits.</span></figcaption>
+      </figure>
+      <figure>
+        <img src="images/drop-open-sample.png" alt="Open the sample drop" />
+        <figcaption><strong>Open the sample</strong><span>The sample card appears on Home with a clear cue.</span></figcaption>
+      </figure>
+      <figure>
+        <img src="images/drop-detail-guide.png" alt="Guide Me Back button on the sample detail screen" />
+        <figcaption><strong>Guide Me Back</strong><span>The user learns the value of returning to the last spot.</span></figcaption>
+      </figure>
+    </section>
+
+    <section class="section split-section reverse">
+      <div class="split-copy">
+        <p class="eyebrow">Activation</p>
+        <h2>From sample to first real drop.</h2>
+        <p>After the sample route, DropSpot points the user toward the real behavior that matters: saving their first real drop.</p>
+        <div class="success-card">
           <span>✓</span>
           <div><strong>First drop saved</strong><small>You’ll be able to find it later.</small></div>
         </div>
       </div>
-    </section>
-
-    <section class="feature-showcase dark-panel">
-      <div class="feature-copy reveal">
-        <p class="section-kicker">Delete education</p>
-        <h2>Teach cleanup without slowing activation.</h2>
-        <p>The sample card can gently reveal swipe-to-delete, while the main path stays focused on saving the first real drop.</p>
-      </div>
-      <div class="delete-preview reveal">
-        <figure class="phone-frame delete-phone"><img src="images/drop-swipe-delete.png" alt="DropSpot swipe left delete reveal" /></figure>
-        <div class="delete-note">Swipe gesture shown only as a subtle product cue.</div>
+      <div class="image-stage dual-phone">
+        <div class="phone-shell behind"><img src="images/drop-detail-guide.png" alt="DropSpot sample detail screen" /></div>
+        <div class="phone-shell front"><img src="images/drop-sample-complete.png" alt="Sample complete screen" /></div>
       </div>
     </section>
 
-    <section class="privacy-section" id="privacy">
-      <div class="section-heading reveal">
-        <p class="section-kicker">Privacy-aware by design</p>
+    <section class="section split-section delete-section">
+      <div class="split-copy">
+        <p class="eyebrow">Delete education</p>
+        <h2>Cleanup is discoverable, not distracting.</h2>
+        <p>A subtle swipe reveal teaches users how to delete individual drops without interrupting the main onboarding path.</p>
+      </div>
+      <div class="image-stage single-phone">
+        <div class="phone-shell"><img src="images/drop-swipe-delete.png" alt="DropSpot swipe-to-delete cue" /></div>
+      </div>
+    </section>
+
+    <section class="section privacy-section" id="privacy">
+      <div class="section-heading">
+        <p class="eyebrow">Privacy-aware</p>
         <h2>Local first. Backup when you choose.</h2>
-        <p>DropSpot keeps sample data local-only. Cloud backup is positioned as optional, controlled, and designed around privacy.</p>
+        <p>DropSpot is a focused utility: no social feed, no clutter, and no surprise backup behavior.</p>
       </div>
-      <div class="privacy-cards">
-        <article class="privacy-card reveal"><span>01</span><h3>Private samples</h3><p>Demo drops are local-only and never count against limits.</p></article>
-        <article class="privacy-card reveal"><span>02</span><h3>Intentional backup</h3><p>Backup is a user-controlled action, not a surprise.</p></article>
-        <article class="privacy-card reveal"><span>03</span><h3>Focused utility</h3><p>No social feed. No clutter. Just fast recall.</p></article>
+      <div class="three-cards">
+        <article><span class="number">01</span><h3>Private samples</h3><p>Demo drops stay on the device and never count against limits.</p></article>
+        <article><span class="number">02</span><h3>Controlled backup</h3><p>Backup is intentional and tied to user choice.</p></article>
+        <article><span class="number">03</span><h3>Focused recall</h3><p>Fast capture and retrieval without extra noise.</p></article>
       </div>
     </section>
 
-    <section class="final-cta reveal">
-      <p class="section-kicker">TEKCO Labs</p>
+    <section class="final-cta">
+      <p class="eyebrow">TEKCO Labs</p>
       <h2>Simple software for real life.</h2>
-      <p>DropSpot helps everyday items become easy to find again.</p>
+      <p>DropSpot helps everyday things become easier to find again.</p>
       <a class="primary-button" href="mailto:tekcosales@gmail.com?subject=DropSpot%20beta%20access">Request beta access</a>
     </section>
   </main>
