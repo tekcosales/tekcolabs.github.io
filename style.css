@@ -176,7 +176,12 @@ h1 {
   box-shadow: var(--shadow-strong), inset 0 0 0 1px rgba(255,255,255,.06);
   border: 1px solid rgba(15,23,42,.12);
 }
-.phone-shell img { width: 100%; height: 100%; object-fit: cover; }
+.phone-shell img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+}
 .hero-phone {
   width: min(365px, 92%);
   transform: rotate(1.5deg);
