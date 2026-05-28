@@ -22,8 +22,8 @@
       <span>TEKCO Labs</span>
     </a>
     <nav aria-label="Primary navigation">
-      <a href="#why">Why</a>
-      <a href="#how">How it works</a>
+      <a href="#why">Why DropSpot</a>
+      <a href="#how">See it work</a>
 
       <a href="#privacy">Privacy</a>
       <a href="mailto:tekcosales@gmail.com">Contact</a>
@@ -48,6 +48,8 @@
 
         <p class="trust-line">Private by default <span>•</span> Photo + place + time <span>•</span> Takes seconds</p>
 
+        <p class="hero-emotion-line">Keys. Wallet. Bag. The things you set down for “just a second.”</p>
+
         <div class="hero-store-badges">
           <a href="#" class="store-badge">
             <img src="images/app-store-badge.svg" alt="Download on the App Store">
@@ -56,7 +58,6 @@
             <img src="images/google-play-badge.svg" alt="Get it on Google Play">
           </a>
         </div>
-</div>
       </div>
 
       <div class="hero-visual" aria-label="DropSpot app preview">
@@ -71,7 +72,7 @@
       </div>
     </section>
 
-    <section class="section need-section" id="why">
+    <section class="section reveal-on-scroll need-section" id="why">
       <div class="section-heading compact">
         <p class="eyebrow">The everyday problem</p>
         <h2>The search always starts at the worst time.</h2>
@@ -97,7 +98,7 @@
     </section>
 
     
-    <section class="section real-life-section">
+    <section class="section reveal-on-scroll real-life-section">
       <div class="section-heading compact">
         <p class="eyebrow">Real life moments</p>
         <h2>Built for the tiny moments that become stressful.</h2>
@@ -125,7 +126,7 @@
     </section>
 
 
-    <section class="section split-section" id="how">
+    <section class="section reveal-on-scroll split-section" id="how">
       <div class="split-copy">
         <p class="eyebrow">Core loop</p>
         <h2>Drop once. Find later.</h2>
@@ -142,7 +143,7 @@
       </div>
     </section>
 
-    <section class="section demo-section" id="demo">
+    <section class="section reveal-on-scroll demo-section" id="demo">
       <div class="section-heading compact">
         <p class="eyebrow">Guided demo</p>
         <h2>Learn it by doing it.</h2>
@@ -177,7 +178,7 @@
       </div>
     </section>
 
-    <section class="section split-section reverse activation-section">
+    <section class="section reveal-on-scroll split-section reverse activation-section">
       <div class="split-copy">
         <p class="eyebrow">First real drop</p>
         <h2>From sample to habit.</h2>
@@ -192,7 +193,7 @@
       </div>
     </section>
 
-    <section class="section split-section delete-section">
+    <section class="section reveal-on-scroll split-section delete-section">
       <div class="split-copy">
         <p class="eyebrow">Cleanup</p>
         <h2>Delete is there when you need it.</h2>
@@ -202,7 +203,7 @@
         <div class="phone-shell"><img loading="lazy" src="images/drop-swipe-delete.png" alt="DropSpot swipe-to-delete cue" /></div>
       </div>
     </section>
-<section class="section privacy-section" id="privacy">
+<section class="section reveal-on-scroll privacy-section" id="privacy">
       <div class="section-heading compact">
         <p class="eyebrow">Privacy-aware by design</p>
         <h2>Local first. Backup when you choose.</h2>
@@ -282,6 +283,28 @@
           closeVideo();
         }
       });
+    })();
+  </script>
+
+
+  <script>
+    (() => {
+      const elements = document.querySelectorAll('.reveal-on-scroll');
+      if (!('IntersectionObserver' in window)) {
+        elements.forEach((el) => el.classList.add('is-visible'));
+        return;
+      }
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('is-visible');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.12 });
+
+      elements.forEach((el) => observer.observe(el));
     })();
   </script>
 
