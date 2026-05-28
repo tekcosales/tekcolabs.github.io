@@ -1414,3 +1414,69 @@ h1 {
     width: min(420px, 100%);
   }
 }
+
+
+/* --- Actual hero screenshot crop fix ---
+   The previous fix reduced the phone width, but the DROP button was still
+   clipped because .phone-shell.hero-phone was forcing a shorter aspect ratio
+   (691 / 1450) while the screenshot asset is taller (691 / 1536).
+*/
+.phone-shell.hero-phone {
+  aspect-ratio: 691 / 1536;
+  height: auto;
+  overflow: hidden;
+}
+
+/* Make sure the hero screenshot maps to the full phone frame instead of
+   being top-aligned and cut off at the bottom. */
+.phone-shell.hero-phone > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+}
+
+/* Keep the full phone from becoming too tall after restoring the real aspect ratio. */
+.hero-phone {
+  width: min(438px, 96%);
+}
+
+/* Slightly lower the inner toast after the phone scale/aspect correction. */
+.in-phone-toast {
+  top: 156px;
+  right: 18px;
+  transform: scale(.80);
+}
+
+/* Rebalance the hero visual height after using the real phone aspect ratio. */
+.hero-visual {
+  min-height: 760px;
+}
+
+@media (min-width: 1500px) {
+  .hero-phone {
+    width: min(452px, 96%);
+  }
+}
+
+@media (max-width: 1100px) {
+  .hero-phone {
+    width: min(420px, 96%);
+  }
+}
+
+@media (max-width: 980px) {
+  .hero-phone {
+    width: min(390px, 96%);
+  }
+
+  .hero-visual {
+    min-height: auto;
+  }
+}
+
+@media (max-width: 640px) {
+  .hero-phone {
+    width: min(330px, 94%);
+  }
+}
