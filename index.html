@@ -38,7 +38,7 @@
         <p class="hero-subtitle">Save a photo, place, and time the moment you set something down. Find it again later.</p>
 
         <div class="hero-actions">
-          <a class="primary-button" href="#demo">Watch 30-sec demo</a>
+          <a class="primary-button" href="#demo-video" data-video-open>Watch 30-sec demo</a>
           <a class="text-link" href="mailto:tekcosales@gmail.com?subject=DropSpot%20beta%20access">Join private beta</a>
 
         <div class="hero-store-badges">
@@ -111,6 +111,14 @@
         <h2>Learn it by doing it.</h2>
         <p>A private sample walkthrough lets you feel the full loop before saving your first real drop.</p>
       </div>
+
+      <button class="demo-video-card" type="button" data-video-open aria-label="Play DropSpot guided demo video">
+        <video muted playsinline preload="metadata" poster="images/drop-hero-clean.png">
+          <source src="media/demo_web.mp4" type="video/mp4" />
+        </video>
+        <span class="demo-play-button">▶</span>
+        <span class="demo-video-caption">Watch the real guided flow</span>
+      </button>
 
       <div class="flow-strip" aria-label="DropSpot guided demo sequence">
         <figure>
@@ -192,5 +200,53 @@
       <a href="#product">DropSpot</a>
     </div>
   </footer>
+
+  <div class="video-modal" id="demo-video-modal" aria-hidden="true">
+    <div class="video-modal-backdrop" data-video-close></div>
+    <div class="video-modal-panel" role="dialog" aria-modal="true" aria-label="DropSpot guided demo video">
+      <button class="video-modal-close" type="button" data-video-close aria-label="Close video">×</button>
+      <video id="demo-video" controls playsinline preload="metadata">
+        <source src="media/demo_web.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+    </div>
+  </div>
+
+  <script>
+    (() => {
+      const modal = document.getElementById('demo-video-modal');
+      const video = document.getElementById('demo-video');
+      const openers = document.querySelectorAll('[data-video-open]');
+      const closers = document.querySelectorAll('[data-video-close]');
+
+      function openVideo(event) {
+        if (event) event.preventDefault();
+        modal.setAttribute('aria-hidden', 'false');
+        document.body.classList.add('video-modal-open');
+        if (video) {
+          video.currentTime = 0;
+          video.play().catch(() => {});
+        }
+      }
+
+      function closeVideo() {
+        modal.setAttribute('aria-hidden', 'true');
+        document.body.classList.remove('video-modal-open');
+        if (video) {
+          video.pause();
+          video.currentTime = 0;
+        }
+      }
+
+      openers.forEach((button) => button.addEventListener('click', openVideo));
+      closers.forEach((button) => button.addEventListener('click', closeVideo));
+      document.addEventListener('keydown', (event) => {
+        if (event.key === 'Escape' && modal.getAttribute('aria-hidden') === 'false') {
+          closeVideo();
+        }
+      });
+    })();
+  </script>
+
 </body>
 </html>
