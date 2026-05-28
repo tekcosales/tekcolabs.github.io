@@ -498,3 +498,13 @@ h1 {
         justify-content:center;
     }
 }
+
+
+/* Deduplicated CTA refinements */
+.final-actions .primary-button {
+  margin-inline: auto;
+}
+
+.hero-store-badges {
+  margin-top: 24px;
+}
