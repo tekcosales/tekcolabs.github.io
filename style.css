@@ -844,3 +844,93 @@ nav a:hover::after {
     margin-inline: auto;
   }
 }
+
+
+/* Final hero polish: clearer CTA, subtler trust signal, stronger product presence */
+.hero {
+  column-gap: clamp(36px, 5vw, 86px);
+}
+
+.hero-copy h1 {
+  line-height: .91;
+}
+
+.hero-subtitle {
+  margin-top: 24px;
+}
+
+.hero-microcopy {
+  margin-top: 14px;
+  max-width: 650px;
+  line-height: 1.55;
+}
+
+.hero-actions {
+  margin-top: 24px;
+  margin-bottom: 0;
+}
+
+.trust-pills {
+  display: none;
+}
+
+.trust-line {
+  margin: 18px 0 0;
+  color: #667085;
+  font-size: 15px;
+  line-height: 1.45;
+  font-weight: 800;
+  letter-spacing: -.015em;
+}
+
+.trust-line span {
+  color: #98a2b3;
+  margin: 0 8px;
+}
+
+.hero-visual {
+  transform: translateX(-34px);
+}
+
+.hero-phone {
+  width: min(450px, 96%);
+}
+
+.hero-phone img {
+  filter: brightness(1.13) contrast(1.06) saturate(1.02);
+}
+
+.site-header nav {
+  color: #485266;
+  font-weight: 820;
+}
+
+.site-header nav a {
+  color: #485266;
+}
+
+@media (min-width: 981px) {
+  .hero-store-badges {
+    margin-top: 20px;
+  }
+
+  .hero {
+    padding-top: 38px;
+  }
+}
+
+@media (max-width: 980px) {
+  .hero-visual {
+    transform: none;
+  }
+
+  .trust-line {
+    text-align: center;
+  }
+}
+
+@media (max-width: 640px) {
+  .trust-line span {
+    margin: 0 5px;
+  }
+}
