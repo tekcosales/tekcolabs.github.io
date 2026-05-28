@@ -1480,3 +1480,110 @@ h1 {
     width: min(330px, 94%);
   }
 }
+
+
+/* --- Final hero CTA + composition polish --- */
+
+/* Keep primary actions visible sooner above the fold. */
+.hero-microcopy {
+  margin-top: 8px;
+  margin-bottom: 0;
+}
+
+.hero-actions {
+  margin-top: 14px;
+}
+
+.hero-store-badges {
+  margin-top: 14px;
+}
+
+.trust-line {
+  margin-top: 12px;
+}
+
+.hero-emotion-line {
+  margin-top: 8px;
+}
+
+.future-self-line {
+  margin-top: 4px;
+}
+
+/* Give the copy a little more breathing room by nudging the device right. */
+.hero-visual {
+  transform: translateX(-60px);
+}
+
+/* Preserve the now-correct phone crop while keeping the product dominant. */
+.hero-phone {
+  width: min(468px, 100%);
+}
+
+/* Subtle lower-screen fade so the hero focuses on the memory moment, not every UI control. */
+.phone-shell.hero-phone::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 24%;
+  pointer-events: none;
+  z-index: 3;
+  background: linear-gradient(
+    to bottom,
+    rgba(9, 13, 22, 0),
+    rgba(9, 13, 22, .10)
+  );
+}
+
+/* Keep overlays above the fade. */
+.in-phone-toast {
+  z-index: 5;
+}
+
+.phone-focus-glow {
+  z-index: 4;
+}
+
+/* Slightly soften the vertical density of the headline on medium desktop widths. */
+@media (min-width: 981px) and (max-width: 1350px) {
+  .hero h1,
+  h1 {
+    font-size: clamp(52px, 5.55vw, 88px);
+    line-height: .875;
+  }
+
+  .hero-subtitle {
+    font-size: clamp(20px, 1.65vw, 26px);
+  }
+}
+
+/* Desktop-wide balance. */
+@media (min-width: 1500px) {
+  .hero-visual {
+    transform: translateX(-74px);
+  }
+}
+
+/* Tablet and mobile safety. */
+@media (max-width: 1100px) {
+  .hero-visual {
+    transform: translateX(-18px);
+  }
+
+  .hero-actions,
+  .hero-store-badges {
+    margin-top: 12px;
+  }
+}
+
+@media (max-width: 980px) {
+  .hero-visual {
+    transform: none;
+  }
+
+  .phone-shell.hero-phone::after {
+    height: 18%;
+  }
+}
