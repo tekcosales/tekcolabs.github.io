@@ -460,3 +460,41 @@ h1 {
   .site-footer { flex-direction: column; }
   .footer-links { justify-content: flex-start; }
 }
+
+
+/* Premium hero CTA refinements */
+.hero-store-badges{
+    display:flex;
+    gap:16px;
+    align-items:center;
+    margin-top:28px;
+    flex-wrap:wrap;
+}
+
+.store-badge img{
+    height:56px;
+    width:auto;
+    display:block;
+    transition:transform .2s ease, opacity .2s ease;
+}
+
+.store-badge img:hover{
+    transform:translateY(-2px);
+    opacity:.92;
+}
+
+.hero-actions{
+    margin-top:32px;
+}
+
+.hero{
+    min-height:auto;
+    padding-top:48px;
+    padding-bottom:48px;
+}
+
+@media (max-width: 900px){
+    .hero-store-badges{
+        justify-content:center;
+    }
+}
