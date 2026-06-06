@@ -1628,3 +1628,201 @@ h1 {
     transform: none;
   }
 }
+
+/* --------------------------------------------------------------------------
+   Mobile hero layout patch
+   Keeps the premium desktop composition intact while giving phones/tablets
+   their own stacked, centered layout with no horizontal overflow.
+---------------------------------------------------------------------------- */
+@media (max-width: 980px) {
+  html,
+  body {
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+
+  .site-header,
+  .hero,
+  .section,
+  .site-footer {
+    width: min(100% - 32px, 1180px);
+  }
+
+  .hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    min-height: auto;
+    margin-bottom: 56px;
+    padding: 34px 0 16px;
+    gap: 34px;
+    text-align: center;
+  }
+
+  .hero-copy {
+    width: 100%;
+    max-width: 680px;
+    transform: none;
+  }
+
+  .eyebrow {
+    justify-content: center;
+    margin-bottom: 16px;
+  }
+
+  .hero h1,
+  h1 {
+    max-width: 680px;
+    margin-right: auto;
+    margin-bottom: 18px;
+    margin-left: auto;
+    font-size: clamp(48px, 12.5vw, 76px);
+    line-height: 0.92;
+    letter-spacing: -0.075em;
+    text-wrap: balance;
+  }
+
+  .hero-subtitle,
+  .hero-microcopy,
+  .hero-emotion-line,
+  .future-self-line {
+    max-width: 560px;
+    margin-right: auto;
+    margin-left: auto;
+    text-align: center;
+  }
+
+  .hero-subtitle {
+    font-size: clamp(20px, 5.2vw, 26px);
+    line-height: 1.22;
+  }
+
+  .hero-microcopy {
+    font-size: 16.5px;
+    line-height: 1.48;
+  }
+
+  .hero-actions,
+  .hero-store-badges {
+    justify-content: center;
+  }
+
+  .hero-visual {
+    width: 100%;
+    min-height: auto;
+    display: grid;
+    place-items: center;
+    transform: none;
+  }
+
+  .hero-visual::before,
+  .hero-glow {
+    width: min(440px, 94vw);
+    height: min(440px, 94vw);
+  }
+
+  .phone-shell.hero-phone,
+  .hero-phone {
+    width: min(390px, 92vw);
+    max-width: 100%;
+    transform: none;
+  }
+
+  .in-phone-toast {
+    top: 116px;
+    right: 10px;
+    max-width: 220px;
+    transform: scale(0.72);
+    transform-origin: top right;
+  }
+}
+
+@media (max-width: 640px) {
+  .site-header,
+  .hero,
+  .section,
+  .site-footer {
+    width: min(100% - 24px, 1180px);
+  }
+
+  .hero {
+    margin-bottom: 44px;
+    padding-top: 26px;
+    gap: 28px;
+  }
+
+  .brand,
+  .footer-logo {
+    font-size: 19px;
+  }
+
+  .brand-mark {
+    width: 34px;
+    height: 34px;
+    border-radius: 12px;
+  }
+
+  .hero h1,
+  h1 {
+    max-width: 360px;
+    font-size: clamp(42px, 15vw, 58px);
+    line-height: 0.94;
+    letter-spacing: -0.065em;
+  }
+
+  .hero-subtitle {
+    max-width: 340px;
+    font-size: 20px;
+  }
+
+  .hero-microcopy {
+    max-width: 340px;
+    font-size: 15.5px;
+  }
+
+  .hero-emotion-line,
+  .future-self-line,
+  .trust-line {
+    max-width: 340px;
+    font-size: 13.5px;
+  }
+
+  .trust-line span {
+    margin: 0 4px;
+  }
+
+  .hero-actions {
+    width: 100%;
+    max-width: 340px;
+    margin-right: auto;
+    margin-left: auto;
+    align-items: stretch;
+  }
+
+  .primary-button,
+  .secondary-button {
+    width: 100%;
+    min-height: 54px;
+  }
+
+  .hero-store-badges {
+    gap: 12px;
+  }
+
+  .store-badge img,
+  .store-badge-link img {
+    height: 44px;
+  }
+
+  .phone-shell.hero-phone,
+  .hero-phone {
+    width: min(330px, 92vw);
+  }
+
+  .in-phone-toast {
+    top: 94px;
+    right: 6px;
+    transform: scale(0.64);
+  }
+}
