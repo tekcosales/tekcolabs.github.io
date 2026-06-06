@@ -13,6 +13,19 @@
   <link rel="icon" href="/favicon.ico" sizes="any" />
   <link rel="icon" href="fav/favicon.svg" type="image/svg+xml" />
   <link rel="apple-touch-icon" href="fav/favicon-512.png" />
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-1CHB53VF8Z"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+    gtag('config', 'G-1CHB53VF8Z');
+  </script>
+
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
@@ -42,8 +55,8 @@
         </p>
 
         <div class="hero-actions">
-          <a class="primary-button" href="#demo-video" data-video-open>Watch demo</a>
-          <a class="text-link" href="mailto:tekcosales@gmail.com?subject=DropSpot%20beta%20access">Join private beta</a>
+          <a class="primary-button" href="#demo-video" data-video-open data-analytics-event="watch_demo_clicked" data-analytics-label="hero_watch_demo">Watch demo</a>
+          <a class="text-link" href="mailto:tekcosales@gmail.com?subject=DropSpot%20beta%20access" data-analytics-event="join_beta_clicked" data-analytics-label="hero_join_private_beta">Join private beta</a>
         </div>
 
         <p class="trust-line">Private by default <span>•</span> Photo + place + time <span>•</span> Takes seconds</p>
@@ -52,10 +65,10 @@
         <p class="future-self-line">Because “I just had it a second ago” happens daily.</p>
 
         <div class="hero-store-badges">
-          <a href="#" class="store-badge">
+          <a href="#" class="store-badge" data-analytics-event="app_store_badge_clicked" data-analytics-label="hero_app_store_badge">
             <img src="images/app-store-badge.svg" alt="Download on the App Store">
           </a>
-          <a href="#" class="store-badge">
+          <a href="#" class="store-badge" data-analytics-event="google_play_badge_clicked" data-analytics-label="hero_google_play_badge">
             <img src="images/google-play-badge.svg" alt="Get it on Google Play">
           </a>
         </div>
@@ -152,7 +165,7 @@
         <p>A private sample walkthrough lets you feel the full loop before saving your first real drop.</p>
       </div>
 
-      <button class="demo-video-card" type="button" data-video-open aria-label="Play DropSpot guided demo video">
+      <button class="demo-video-card" type="button" data-video-open data-analytics-event="watch_demo_clicked" data-analytics-label="demo_section_video_card" aria-label="Play DropSpot guided demo video">
         <video muted playsinline preload="metadata" poster="images/drop-hero-clean.png">
           <source src="media/demo_web.mp4" type="video/mp4" />
         </video>
@@ -223,7 +236,7 @@
       <h2>Built for the things real life makes easy to lose.</h2>
       <p>Join the private beta and help shape DropSpot before launch.</p>
       <div class="final-actions">
-        <a class="primary-button" href="mailto:tekcosales@gmail.com?subject=DropSpot%20beta%20access">Join private beta</a>
+        <a class="primary-button" href="mailto:tekcosales@gmail.com?subject=DropSpot%20beta%20access" data-analytics-event="join_beta_clicked" data-analytics-label="final_cta_join_private_beta">Join private beta</a>
 </div>
     </section>
   </main>
@@ -251,6 +264,31 @@
       </video>
     </div>
   </div>
+
+  <script>
+    (() => {
+      function trackEvent(eventName, eventLabel) {
+        if (typeof gtag !== 'function' || !eventName) {
+          return;
+        }
+
+        gtag('event', eventName, {
+          event_category: 'engagement',
+          event_label: eventLabel || '',
+          transport_type: 'beacon'
+        });
+      }
+
+      document.querySelectorAll('[data-analytics-event]').forEach((element) => {
+        element.addEventListener('click', () => {
+          trackEvent(
+            element.getAttribute('data-analytics-event'),
+            element.getAttribute('data-analytics-label')
+          );
+        });
+      });
+    })();
+  </script>
 
   <script>
     (() => {
