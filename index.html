@@ -313,8 +313,37 @@
       const openers = document.querySelectorAll('[data-video-open]');
       const closers = document.querySelectorAll('[data-video-close]');
 
+      let videoStartedTracked = false;
+      let videoSeventyFivePercentTracked = false;
+      let videoCompletedTracked = false;
+
+      function trackVideoEvent(eventName, eventLabel) {
+        if (!eventName) {
+          return;
+        }
+
+        if (typeof gtag === 'function') {
+          gtag('event', eventName, {
+            event_category: 'video',
+            event_label: eventLabel || 'guided_demo_video',
+            transport_type: 'beacon'
+          });
+        }
+
+        if (typeof clarity === 'function') {
+          clarity('event', eventName);
+        }
+      }
+
+      function resetVideoTracking() {
+        videoStartedTracked = false;
+        videoSeventyFivePercentTracked = false;
+        videoCompletedTracked = false;
+      }
+
       function openVideo(event) {
         if (event) event.preventDefault();
+        resetVideoTracking();
         modal.setAttribute('aria-hidden', 'false');
         document.body.classList.add('video-modal-open');
         if (video) {
@@ -330,6 +359,37 @@
           video.pause();
           video.currentTime = 0;
         }
+      }
+
+      if (video) {
+        video.addEventListener('play', () => {
+          if (videoStartedTracked) {
+            return;
+          }
+
+          videoStartedTracked = true;
+          trackVideoEvent('demo_video_started');
+        });
+
+        video.addEventListener('timeupdate', () => {
+          if (videoSeventyFivePercentTracked || !video.duration) {
+            return;
+          }
+
+          if (video.currentTime / video.duration >= 0.75) {
+            videoSeventyFivePercentTracked = true;
+            trackVideoEvent('demo_video_75_percent');
+          }
+        });
+
+        video.addEventListener('ended', () => {
+          if (videoCompletedTracked) {
+            return;
+          }
+
+          videoCompletedTracked = true;
+          trackVideoEvent('demo_video_completed');
+        });
       }
 
       openers.forEach((button) => button.addEventListener('click', openVideo));
