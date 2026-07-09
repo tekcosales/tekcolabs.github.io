@@ -2250,3 +2250,15 @@ h1 {
     font-size: 15.5px;
   }
 }
+
+
+/* Support page refinements */
+.privacy-summary-grid article span {
+  font-size: 34px;
+  display: inline-block;
+  margin-bottom: 12px;
+}
+
+.privacy-summary-grid article h2 {
+  margin-bottom: 8px;
+}
